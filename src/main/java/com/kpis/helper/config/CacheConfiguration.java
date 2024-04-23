@@ -52,6 +52,14 @@ public class CacheConfiguration {
             createCache(cm, com.kpis.helper.domain.User.class.getName() + ".authorities");
             createCache(cm, com.kpis.helper.domain.PersistentToken.class.getName());
             createCache(cm, com.kpis.helper.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, com.kpis.helper.domain.Library.class.getName());
+            createCache(cm, com.kpis.helper.domain.Collection.class.getName());
+            createCache(cm, com.kpis.helper.domain.Collection.class.getName() + ".libraries");
+            createCache(cm, com.kpis.helper.domain.Population.class.getName());
+            createCache(cm, com.kpis.helper.domain.Population.class.getName() + ".libraries");
+            createCache(cm, com.kpis.helper.domain.Library.class.getName() + ".populations");
+            createCache(cm, com.kpis.helper.domain.Library.class.getName() + ".collections");
+            createCache(cm, com.kpis.helper.domain.Visitors.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

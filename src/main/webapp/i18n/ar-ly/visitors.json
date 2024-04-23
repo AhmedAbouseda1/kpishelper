@@ -1,0 +1,26 @@
+{
+  "kpishelperApp": {
+    "visitors": {
+      "home": {
+        "title": "Visitors",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Visitors",
+        "createOrEditLabel": "Create or edit a Visitors",
+        "notFound": "No Visitors found"
+      },
+      "created": "A new Visitors is created with identifier {{ param }}",
+      "updated": "A Visitors is updated with identifier {{ param }}",
+      "deleted": "A Visitors is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Visitors {{ id }}?"
+      },
+      "detail": {
+        "title": "Visitors"
+      },
+      "id": "ID",
+      "total_visitors": "Total Visitors",
+      "website_visitors": "Website Visitors",
+      "recorded_date": "Recorded Date"
+    }
+  }
+}

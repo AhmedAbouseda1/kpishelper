@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240422175121"
+  },
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "date_recorded",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "collection_size",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "number_of_titles",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "stock_for_public_usage",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "titles_availability_for_population",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "titles_availability_for_active_members",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Collection",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

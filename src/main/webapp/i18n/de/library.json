@@ -1,0 +1,27 @@
+{
+  "kpishelperApp": {
+    "library": {
+      "home": {
+        "title": "Libraries",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Library erstellen",
+        "createOrEditLabel": "Library erstellen oder bearbeiten",
+        "notFound": "Keine Libraries gefunden"
+      },
+      "created": "Library erstellt mit ID {{ param }}",
+      "updated": "Library aktualisiert mit ID {{ param }}",
+      "deleted": "Library gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Library {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Library"
+      },
+      "id": "ID",
+      "name": "Name",
+      "location": "Location",
+      "population": "Population",
+      "collection": "Collection"
+    }
+  }
+}

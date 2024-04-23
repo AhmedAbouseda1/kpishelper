@@ -1,0 +1,27 @@
+{
+  "kpishelperApp": {
+    "population": {
+      "home": {
+        "title": "Populations",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Population erstellen",
+        "createOrEditLabel": "Population erstellen oder bearbeiten",
+        "notFound": "Keine Populations gefunden"
+      },
+      "created": "Population erstellt mit ID {{ param }}",
+      "updated": "Population aktualisiert mit ID {{ param }}",
+      "deleted": "Population gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Population {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Population"
+      },
+      "id": "ID",
+      "date_recorded": "Date Recorded",
+      "population": "Population",
+      "active_members": "Active Members",
+      "library": "Library"
+    }
+  }
+}
