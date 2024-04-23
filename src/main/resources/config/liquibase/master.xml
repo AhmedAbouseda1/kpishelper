@@ -16,7 +16,6 @@
     <include file="config/liquibase/changelog/20240422235505_added_entity_Population.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240423001934_added_entity_Visitors.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
-    <include file="config/liquibase/changelog/20240422174741_added_entity_constraints_Library.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240422235505_added_entity_constraints_Population.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240422175121_added_entity_constraints_Collection.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
