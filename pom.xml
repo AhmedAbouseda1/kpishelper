@@ -10,6 +10,17 @@
     <name>Kpishelper</name>
     <description>Description for Kpishelper</description>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id/>
+            <url/>
+        </snapshotRepository>
+        <repository>
+            <id/>
+            <url/>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <!--
             Build properties
