@@ -1,0 +1,27 @@
+{
+  "kpishelperApp": {
+    "population": {
+      "home": {
+        "title": "Populations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Population",
+        "createOrEditLabel": "Create or edit a Population",
+        "notFound": "No Populations found"
+      },
+      "created": "A new Population is created with identifier {{ param }}",
+      "updated": "A Population is updated with identifier {{ param }}",
+      "deleted": "A Population is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Population {{ id }}?"
+      },
+      "detail": {
+        "title": "Population"
+      },
+      "id": "ID",
+      "date_recorded": "Date Recorded",
+      "population": "Population",
+      "active_members": "Active Members",
+      "library": "Library"
+    }
+  }
+}

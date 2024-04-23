@@ -1,0 +1,30 @@
+{
+  "kpishelperApp": {
+    "collection": {
+      "home": {
+        "title": "Collections",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Collection",
+        "createOrEditLabel": "Create or edit a Collection",
+        "notFound": "No Collections found"
+      },
+      "created": "A new Collection is created with identifier {{ param }}",
+      "updated": "A Collection is updated with identifier {{ param }}",
+      "deleted": "A Collection is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Collection {{ id }}?"
+      },
+      "detail": {
+        "title": "Collection"
+      },
+      "id": "ID",
+      "date_recorded": "Date Recorded",
+      "collection_size": "Collection Size",
+      "number_of_titles": "Number Of Titles",
+      "stock_for_public_usage": "Stock For Public Usage",
+      "titles_availability_for_population": "Titles Availability For Population",
+      "titles_availability_for_active_members": "Titles Availability For Active Members",
+      "library": "Library"
+    }
+  }
+}

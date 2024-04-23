@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20240423001934"
+  },
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "total_visitors",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "website_visitors",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "recorded_date",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Visitors",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

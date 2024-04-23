@@ -1,0 +1,213 @@
+import React, { useState, useEffect } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Button, Table } from 'reactstrap';
+import { Translate, TextFormat, getPaginationState } from 'react-jhipster';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
+import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
+import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.constants';
+import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
+import { useAppDispatch, useAppSelector } from 'app/config/store';
+
+import { getEntities, reset } from './population.reducer';
+
+export const Population = () => {
+  const dispatch = useAppDispatch();
+
+  const pageLocation = useLocation();
+
+  const [paginationState, setPaginationState] = useState(
+    overridePaginationStateWithQueryParams(getPaginationState(pageLocation, ITEMS_PER_PAGE, 'id'), pageLocation.search),
+  );
+  const [sorting, setSorting] = useState(false);
+
+  const populationList = useAppSelector(state => state.population.entities);
+  const loading = useAppSelector(state => state.population.loading);
+  const links = useAppSelector(state => state.population.links);
+  const updateSuccess = useAppSelector(state => state.population.updateSuccess);
+
+  const getAllEntities = () => {
+    dispatch(
+      getEntities({
+        page: paginationState.activePage - 1,
+        size: paginationState.itemsPerPage,
+        sort: `${paginationState.sort},${paginationState.order}`,
+      }),
+    );
+  };
+
+  const resetAll = () => {
+    dispatch(reset());
+    setPaginationState({
+      ...paginationState,
+      activePage: 1,
+    });
+    dispatch(getEntities({}));
+  };
+
+  useEffect(() => {
+    resetAll();
+  }, []);
+
+  useEffect(() => {
+    if (updateSuccess) {
+      resetAll();
+    }
+  }, [updateSuccess]);
+
+  useEffect(() => {
+    getAllEntities();
+  }, [paginationState.activePage]);
+
+  const handleLoadMore = () => {
+    if ((window as any).pageYOffset > 0) {
+      setPaginationState({
+        ...paginationState,
+        activePage: paginationState.activePage + 1,
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (sorting) {
+      getAllEntities();
+      setSorting(false);
+    }
+  }, [sorting]);
+
+  const sort = p => () => {
+    dispatch(reset());
+    setPaginationState({
+      ...paginationState,
+      activePage: 1,
+      order: paginationState.order === ASC ? DESC : ASC,
+      sort: p,
+    });
+    setSorting(true);
+  };
+
+  const handleSyncList = () => {
+    resetAll();
+  };
+
+  const getSortIconByFieldName = (fieldName: string) => {
+    const sortFieldName = paginationState.sort;
+    const order = paginationState.order;
+    if (sortFieldName !== fieldName) {
+      return faSort;
+    } else {
+      return order === ASC ? faSortUp : faSortDown;
+    }
+  };
+
+  return (
+    <div>
+      <h2 id="population-heading" data-cy="PopulationHeading">
+        <Translate contentKey="kpishelperApp.population.home.title">Populations</Translate>
+        <div className="d-flex justify-content-end">
+          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+            <FontAwesomeIcon icon="sync" spin={loading} />{' '}
+            <Translate contentKey="kpishelperApp.population.home.refreshListLabel">Refresh List</Translate>
+          </Button>
+          <Link to="/population/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
+            <FontAwesomeIcon icon="plus" />
+            &nbsp;
+            <Translate contentKey="kpishelperApp.population.home.createLabel">Create new Population</Translate>
+          </Link>
+        </div>
+      </h2>
+      <div className="table-responsive">
+        <InfiniteScroll
+          dataLength={populationList ? populationList.length : 0}
+          next={handleLoadMore}
+          hasMore={paginationState.activePage - 1 < links.next}
+          loader={<div className="loader">Loading ...</div>}
+        >
+          {populationList && populationList.length > 0 ? (
+            <Table responsive>
+              <thead>
+                <tr>
+                  <th className="hand" onClick={sort('id')}>
+                    <Translate contentKey="kpishelperApp.population.id">ID</Translate>{' '}
+                    <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
+                  </th>
+                  <th className="hand" onClick={sort('date_recorded')}>
+                    <Translate contentKey="kpishelperApp.population.date_recorded">Date Recorded</Translate>{' '}
+                    <FontAwesomeIcon icon={getSortIconByFieldName('date_recorded')} />
+                  </th>
+                  <th className="hand" onClick={sort('population')}>
+                    <Translate contentKey="kpishelperApp.population.population">Population</Translate>{' '}
+                    <FontAwesomeIcon icon={getSortIconByFieldName('population')} />
+                  </th>
+                  <th className="hand" onClick={sort('active_members')}>
+                    <Translate contentKey="kpishelperApp.population.active_members">Active Members</Translate>{' '}
+                    <FontAwesomeIcon icon={getSortIconByFieldName('active_members')} />
+                  </th>
+                  <th>
+                    <Translate contentKey="kpishelperApp.population.library">Library</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
+                  <th />
+                </tr>
+              </thead>
+              <tbody>
+                {populationList.map((population, i) => (
+                  <tr key={`entity-${i}`} data-cy="entityTable">
+                    <td>
+                      <Button tag={Link} to={`/population/${population.id}`} color="link" size="sm">
+                        {population.id}
+                      </Button>
+                    </td>
+                    <td>
+                      {population.date_recorded ? (
+                        <TextFormat type="date" value={population.date_recorded} format={APP_LOCAL_DATE_FORMAT} />
+                      ) : null}
+                    </td>
+                    <td>{population.population}</td>
+                    <td>{population.active_members}</td>
+                    <td>{population.library ? <Link to={`/library/${population.library.id}`}>{population.library.id}</Link> : ''}</td>
+                    <td className="text-end">
+                      <div className="btn-group flex-btn-group-container">
+                        <Button tag={Link} to={`/population/${population.id}`} color="info" size="sm" data-cy="entityDetailsButton">
+                          <FontAwesomeIcon icon="eye" />{' '}
+                          <span className="d-none d-md-inline">
+                            <Translate contentKey="entity.action.view">View</Translate>
+                          </span>
+                        </Button>
+                        <Button tag={Link} to={`/population/${population.id}/edit`} color="primary" size="sm" data-cy="entityEditButton">
+                          <FontAwesomeIcon icon="pencil-alt" />{' '}
+                          <span className="d-none d-md-inline">
+                            <Translate contentKey="entity.action.edit">Edit</Translate>
+                          </span>
+                        </Button>
+                        <Button
+                          onClick={() => (window.location.href = `/population/${population.id}/delete`)}
+                          color="danger"
+                          size="sm"
+                          data-cy="entityDeleteButton"
+                        >
+                          <FontAwesomeIcon icon="trash" />{' '}
+                          <span className="d-none d-md-inline">
+                            <Translate contentKey="entity.action.delete">Delete</Translate>
+                          </span>
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          ) : (
+            !loading && (
+              <div className="alert alert-warning">
+                <Translate contentKey="kpishelperApp.population.home.notFound">No Populations found</Translate>
+              </div>
+            )
+          )}
+        </InfiniteScroll>
+      </div>
+    </div>
+  );
+};
+
+export default Population;
