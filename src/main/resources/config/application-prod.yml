@@ -33,9 +33,9 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mariadb://daa.h.filess.io:3305/kpishelper_contrastat?useLegacyDatetimeCode=false
-    username: kpishelper_contrastat
-    password: 2195b6200cea2b69d6248d037f372481cc08acc3
+    url: jdbc:mariadb://p5a.h.filess.io:3305/KPI_couragepig?useLegacyDatetimeCode=false
+    username: KPI_couragepig
+    password: 7a91d864ba5547b11194f4940bd173aae2b54486
     hikari:
       poolName: Hikari
       auto-commit: false
