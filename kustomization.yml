@@ -1,0 +1,8 @@
+commonLabels:
+  app.kubernetes.io/genereted-by: JHipster
+
+resources:
+# Individual apps
+# service discovery eureka/consul
+
+patchesJson6902:
