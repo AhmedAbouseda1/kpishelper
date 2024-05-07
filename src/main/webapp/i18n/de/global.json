@@ -11,7 +11,13 @@
         "library": "Library",
         "collection": "Collection",
         "population": "Population",
-        "visitors": "Visitors"
+        "visitors": "Visitors",
+        "staff": "Staff",
+        "electronicServices": "Electronic Services",
+        "space": "Space",
+        "loans": "Loans",
+        "activities": "Activities",
+        "training": "Training"
       },
       "account": {
         "main": "Zugang",

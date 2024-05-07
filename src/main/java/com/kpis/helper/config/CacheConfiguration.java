@@ -60,6 +60,12 @@ public class CacheConfiguration {
             createCache(cm, com.kpis.helper.domain.Library.class.getName() + ".populations");
             createCache(cm, com.kpis.helper.domain.Library.class.getName() + ".collections");
             createCache(cm, com.kpis.helper.domain.Visitors.class.getName());
+            createCache(cm, com.kpis.helper.domain.Staff.class.getName());
+            createCache(cm, com.kpis.helper.domain.ElectronicServices.class.getName());
+            createCache(cm, com.kpis.helper.domain.Space.class.getName());
+            createCache(cm, com.kpis.helper.domain.Loans.class.getName());
+            createCache(cm, com.kpis.helper.domain.Activities.class.getName());
+            createCache(cm, com.kpis.helper.domain.Training.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -352,10 +352,7 @@ class CollectionResourceIT {
         Collection partialUpdatedCollection = new Collection();
         partialUpdatedCollection.setId(collection.getId());
 
-        partialUpdatedCollection
-            .collection_size(UPDATED_COLLECTION_SIZE)
-            .titles_availability_for_population(UPDATED_TITLES_AVAILABILITY_FOR_POPULATION)
-            .titles_availability_for_active_members(UPDATED_TITLES_AVAILABILITY_FOR_ACTIVE_MEMBERS);
+        partialUpdatedCollection.collection_size(UPDATED_COLLECTION_SIZE);
 
         restCollectionMockMvc
             .perform(

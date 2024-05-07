@@ -15,7 +15,7 @@ describe('Library e2e test', () => {
   const libraryPageUrlPattern = new RegExp('/library(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const librarySample = { name: 'tango' };
+  const librarySample = { name: 'against' };
 
   let library;
 
@@ -159,11 +159,11 @@ describe('Library e2e test', () => {
     });
 
     it('should create an instance of Library', () => {
-      cy.get(`[data-cy="name"]`).type('thoroughly balaclava geez');
-      cy.get(`[data-cy="name"]`).should('have.value', 'thoroughly balaclava geez');
+      cy.get(`[data-cy="name"]`).type('preface');
+      cy.get(`[data-cy="name"]`).should('have.value', 'preface');
 
-      cy.get(`[data-cy="location"]`).type('finally');
-      cy.get(`[data-cy="location"]`).should('have.value', 'finally');
+      cy.get(`[data-cy="location"]`).type('likewise pfft');
+      cy.get(`[data-cy="location"]`).should('have.value', 'likewise pfft');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

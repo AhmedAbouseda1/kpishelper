@@ -162,11 +162,11 @@ describe('Visitors e2e test', () => {
     });
 
     it('should create an instance of Visitors', () => {
-      cy.get(`[data-cy="total_visitors"]`).type('19899');
-      cy.get(`[data-cy="total_visitors"]`).should('have.value', '19899');
+      cy.get(`[data-cy="total_visitors"]`).type('25171');
+      cy.get(`[data-cy="total_visitors"]`).should('have.value', '25171');
 
-      cy.get(`[data-cy="website_visitors"]`).type('21298');
-      cy.get(`[data-cy="website_visitors"]`).should('have.value', '21298');
+      cy.get(`[data-cy="website_visitors"]`).type('5953');
+      cy.get(`[data-cy="website_visitors"]`).should('have.value', '5953');
 
       cy.get(`[data-cy="recorded_date"]`).type('2024-04-22');
       cy.get(`[data-cy="recorded_date"]`).blur();

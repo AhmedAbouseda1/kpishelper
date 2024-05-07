@@ -607,7 +607,7 @@ class VisitorsResourceIT {
         Visitors partialUpdatedVisitors = new Visitors();
         partialUpdatedVisitors.setId(visitors.getId());
 
-        partialUpdatedVisitors.total_visitors(UPDATED_TOTAL_VISITORS).website_visitors(UPDATED_WEBSITE_VISITORS);
+        partialUpdatedVisitors.total_visitors(UPDATED_TOTAL_VISITORS).recorded_date(UPDATED_RECORDED_DATE);
 
         restVisitorsMockMvc
             .perform(

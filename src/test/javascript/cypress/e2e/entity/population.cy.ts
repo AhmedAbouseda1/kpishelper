@@ -15,7 +15,7 @@ describe('Population e2e test', () => {
   const populationPageUrlPattern = new RegExp('/population(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const populationSample = { date_recorded: '2024-04-22', population: 1019 };
+  const populationSample = { date_recorded: '2024-04-22', population: 13878 };
 
   let population;
 
@@ -166,11 +166,11 @@ describe('Population e2e test', () => {
       cy.get(`[data-cy="date_recorded"]`).blur();
       cy.get(`[data-cy="date_recorded"]`).should('have.value', '2024-04-22');
 
-      cy.get(`[data-cy="population"]`).type('8363');
-      cy.get(`[data-cy="population"]`).should('have.value', '8363');
+      cy.get(`[data-cy="population"]`).type('9223');
+      cy.get(`[data-cy="population"]`).should('have.value', '9223');
 
-      cy.get(`[data-cy="active_members"]`).type('26964');
-      cy.get(`[data-cy="active_members"]`).should('have.value', '26964');
+      cy.get(`[data-cy="active_members"]`).type('3860');
+      cy.get(`[data-cy="active_members"]`).should('have.value', '3860');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

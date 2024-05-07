@@ -15,6 +15,12 @@
     <include file="config/liquibase/changelog/20240422175121_added_entity_Collection.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240422235505_added_entity_Population.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240423001934_added_entity_Visitors.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240506170000_added_entity_Staff.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240506170222_added_entity_ElectronicServices.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240506170523_added_entity_Space.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240506170725_added_entity_Loans.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240506170946_added_entity_Activities.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240506171219_added_entity_Training.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20240422235505_added_entity_constraints_Population.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240422175121_added_entity_constraints_Collection.xml" relativeToChangelogFile="false"/>

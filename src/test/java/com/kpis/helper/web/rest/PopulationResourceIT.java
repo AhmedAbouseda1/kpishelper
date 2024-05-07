@@ -649,7 +649,7 @@ class PopulationResourceIT {
         Population partialUpdatedPopulation = new Population();
         partialUpdatedPopulation.setId(population.getId());
 
-        partialUpdatedPopulation.population(UPDATED_POPULATION);
+        partialUpdatedPopulation.date_recorded(UPDATED_DATE_RECORDED).population(UPDATED_POPULATION);
 
         restPopulationMockMvc
             .perform(

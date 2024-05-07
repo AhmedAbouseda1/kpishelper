@@ -15,7 +15,7 @@ describe('Collection e2e test', () => {
   const collectionPageUrlPattern = new RegExp('/collection(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const collectionSample = { collection_size: 3571, number_of_titles: 20623 };
+  const collectionSample = { collection_size: 29191, number_of_titles: 193 };
 
   let collection;
 
@@ -159,24 +159,24 @@ describe('Collection e2e test', () => {
     });
 
     it('should create an instance of Collection', () => {
-      cy.get(`[data-cy="date_recorded"]`).type('2024-04-21');
+      cy.get(`[data-cy="date_recorded"]`).type('2024-04-22');
       cy.get(`[data-cy="date_recorded"]`).blur();
-      cy.get(`[data-cy="date_recorded"]`).should('have.value', '2024-04-21');
+      cy.get(`[data-cy="date_recorded"]`).should('have.value', '2024-04-22');
 
-      cy.get(`[data-cy="collection_size"]`).type('13147');
-      cy.get(`[data-cy="collection_size"]`).should('have.value', '13147');
+      cy.get(`[data-cy="collection_size"]`).type('29628');
+      cy.get(`[data-cy="collection_size"]`).should('have.value', '29628');
 
-      cy.get(`[data-cy="number_of_titles"]`).type('19709');
-      cy.get(`[data-cy="number_of_titles"]`).should('have.value', '19709');
+      cy.get(`[data-cy="number_of_titles"]`).type('19533');
+      cy.get(`[data-cy="number_of_titles"]`).should('have.value', '19533');
 
-      cy.get(`[data-cy="stock_for_public_usage"]`).type('10230');
-      cy.get(`[data-cy="stock_for_public_usage"]`).should('have.value', '10230');
+      cy.get(`[data-cy="stock_for_public_usage"]`).type('6953');
+      cy.get(`[data-cy="stock_for_public_usage"]`).should('have.value', '6953');
 
-      cy.get(`[data-cy="titles_availability_for_population"]`).type('16962');
-      cy.get(`[data-cy="titles_availability_for_population"]`).should('have.value', '16962');
+      cy.get(`[data-cy="titles_availability_for_population"]`).type('1733');
+      cy.get(`[data-cy="titles_availability_for_population"]`).should('have.value', '1733');
 
-      cy.get(`[data-cy="titles_availability_for_active_members"]`).type('13225');
-      cy.get(`[data-cy="titles_availability_for_active_members"]`).should('have.value', '13225');
+      cy.get(`[data-cy="titles_availability_for_active_members"]`).type('9652');
+      cy.get(`[data-cy="titles_availability_for_active_members"]`).should('have.value', '9652');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

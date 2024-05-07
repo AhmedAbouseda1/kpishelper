@@ -293,7 +293,7 @@ class LibraryResourceIT {
         Library partialUpdatedLibrary = new Library();
         partialUpdatedLibrary.setId(library.getId());
 
-        partialUpdatedLibrary.name(UPDATED_NAME);
+        partialUpdatedLibrary.location(UPDATED_LOCATION);
 
         restLibraryMockMvc
             .perform(
