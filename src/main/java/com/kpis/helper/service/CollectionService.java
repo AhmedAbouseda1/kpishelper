@@ -47,10 +47,16 @@ public interface CollectionService {
      */
     Optional<CollectionDTO> findOne(Long id);
 
-    /**
-     * Delete the "id" collection.
-     *
-     * @param id the id of the entity.
-     */
-    void delete(Long id);
+    public DashboardDTO getDashboardData() {
+        DashboardDTO dashboardDTO = new DashboardDTO();
+        
+        dashboardDTO.setCollectionSize(collectionRepository.count());
+        dashboardDTO.setCollectionRecordedDate(collectionRepository.findTopByOrderByRecordedDateDesc().getRecordedDate());
+        
+        dashboardDTO.setActivitiesRecordedDate(activitiesRepository.findMaxRecordedDate());
+        dashboardDTO.setTotalActivities(activitiesRepository.count());
+        dashboardDTO.setTotalParticipants(activitiesRepository.sumParticipants());
+        
+        return dashboardDTO;
+    }
 }
