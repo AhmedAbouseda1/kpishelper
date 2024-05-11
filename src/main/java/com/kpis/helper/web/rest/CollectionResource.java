@@ -34,12 +34,21 @@ public class CollectionResource {
     private String applicationName;
 
     private final CollectionService collectionService;
-
+    
     private final CollectionRepository collectionRepository;
-
-    public CollectionResource(CollectionService collectionService, CollectionRepository collectionRepository) {
+    
+    private final ActivitiesRepository activitiesRepository;
+    
+    public CollectionResource(CollectionService collectionService, CollectionRepository collectionRepository, ActivitiesRepository activitiesRepository) {
         this.collectionService = collectionService;
         this.collectionRepository = collectionRepository;
+        this.activitiesRepository = activitiesRepository;
+    }
+    
+    @GetMapping("/api/dashboard")
+    public DashboardDTO getDashboardData() {
+        log.debug("REST request to get dashboard data");
+        return collectionService.getDashboardData();
     }
 
     /**
