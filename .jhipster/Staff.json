@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "changelogDate": "20240506170000"
+  },
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "recorded_date",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "number_of_staff",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "1"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Staff",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

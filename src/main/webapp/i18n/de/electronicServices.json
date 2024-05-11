@@ -1,0 +1,26 @@
+{
+  "kpishelperApp": {
+    "electronicServices": {
+      "home": {
+        "title": "Electronic Services",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Electronic Services erstellen",
+        "createOrEditLabel": "Electronic Services erstellen oder bearbeiten",
+        "notFound": "Keine Electronic Services gefunden"
+      },
+      "created": "Electronic Services erstellt mit ID {{ param }}",
+      "updated": "Electronic Services aktualisiert mit ID {{ param }}",
+      "deleted": "Electronic Services gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Electronic Services {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Electronic Services"
+      },
+      "id": "ID",
+      "recorded_date": "Recorded Date",
+      "total_pcs_with_internet": "Total Pcs With Internet",
+      "pcs_with_internet_for_clients_only": "Pcs With Internet For Clients Only"
+    }
+  }
+}

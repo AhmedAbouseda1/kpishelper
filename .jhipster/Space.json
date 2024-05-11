@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "changelogDate": "20240506170523"
+  },
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "recorded_date",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "square_meters_available",
+      "fieldType": "Long",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "1"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Space",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,26 @@
+{
+  "kpishelperApp": {
+    "training": {
+      "home": {
+        "title": "Trainings",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Training erstellen",
+        "createOrEditLabel": "Training erstellen oder bearbeiten",
+        "notFound": "Keine Trainings gefunden"
+      },
+      "created": "Training erstellt mit ID {{ param }}",
+      "updated": "Training aktualisiert mit ID {{ param }}",
+      "deleted": "Training gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Training {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Training"
+      },
+      "id": "ID",
+      "recorded_date": "Recorded Date",
+      "total_courses": "Total Courses",
+      "total_participants": "Total Participants"
+    }
+  }
+}

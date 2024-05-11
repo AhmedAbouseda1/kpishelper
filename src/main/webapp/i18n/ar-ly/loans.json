@@ -1,0 +1,27 @@
+{
+  "kpishelperApp": {
+    "loans": {
+      "home": {
+        "title": "Loans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Loans",
+        "createOrEditLabel": "Create or edit a Loans",
+        "notFound": "No Loans found"
+      },
+      "created": "A new Loans is created with identifier {{ param }}",
+      "updated": "A Loans is updated with identifier {{ param }}",
+      "deleted": "A Loans is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Loans {{ id }}?"
+      },
+      "detail": {
+        "title": "Loans"
+      },
+      "id": "ID",
+      "recorded_date": "Recorded Date",
+      "total_items_borrowed": "Total Items Borrowed",
+      "turnover_rate": "Turnover Rate",
+      "media_borrowed_at_least_once_percentage": "Media Borrowed At Least Once Percentage"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20240506170946"
+  },
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "recorded_date",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "total_activities",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "total_participants",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Activities",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

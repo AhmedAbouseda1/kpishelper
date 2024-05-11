@@ -1,0 +1,30 @@
+{
+  "annotations": {
+    "changelogDate": "20240506170222"
+  },
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "recorded_date",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "total_pcs_with_internet",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "fieldName": "pcs_with_internet_for_clients_only",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "ElectronicServices",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

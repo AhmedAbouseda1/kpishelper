@@ -1,0 +1,25 @@
+{
+  "kpishelperApp": {
+    "space": {
+      "home": {
+        "title": "Spaces",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Space erstellen",
+        "createOrEditLabel": "Space erstellen oder bearbeiten",
+        "notFound": "Keine Spaces gefunden"
+      },
+      "created": "Space erstellt mit ID {{ param }}",
+      "updated": "Space aktualisiert mit ID {{ param }}",
+      "deleted": "Space gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Space {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Space"
+      },
+      "id": "ID",
+      "recorded_date": "Recorded Date",
+      "square_meters_available": "Square Meters Available"
+    }
+  }
+}

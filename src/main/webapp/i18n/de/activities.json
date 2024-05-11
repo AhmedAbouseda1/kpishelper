@@ -1,0 +1,26 @@
+{
+  "kpishelperApp": {
+    "activities": {
+      "home": {
+        "title": "Activities",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Activities erstellen",
+        "createOrEditLabel": "Activities erstellen oder bearbeiten",
+        "notFound": "Keine Activities gefunden"
+      },
+      "created": "Activities erstellt mit ID {{ param }}",
+      "updated": "Activities aktualisiert mit ID {{ param }}",
+      "deleted": "Activities gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Activities {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Activities"
+      },
+      "id": "ID",
+      "recorded_date": "Recorded Date",
+      "total_activities": "Total Activities",
+      "total_participants": "Total Participants"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240506170725"
+  },
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "recorded_date",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "total_items_borrowed",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "turnover_rate",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "media_borrowed_at_least_once_percentage",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Loans",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
